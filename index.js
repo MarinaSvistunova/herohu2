@@ -19,4 +19,4 @@ require('http').Server((req, res) => {
   serve(req, res, () => res.writeHead(404) || res.end('not found'));
 })
 
-.listen(PORT, () => console.log(`running ${process.pid} at port ${PORT}`));
+.listen(process.env.PORT || PORT, () => console.log(process.pid));
